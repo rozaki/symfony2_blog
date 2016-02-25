@@ -1,0 +1,13 @@
+// src/AppBundle/Utils/Slugger.php
+namespace AppBundle\Utils;
+
+class Slugger
+{
+	public function slugify($string)
+	{
+		return preg_replace(
+			'/[^a-z0-9]/', '-', strtoloer(trim(strip_tags($string)))
+		);
+  }
+}
+
